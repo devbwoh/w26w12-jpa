@@ -2,7 +2,7 @@ spring:
   application:
     name: w26w12-jpa
   profiles:
-    active: h2 # memory, h2, supabase
+    active: supabase # memory, h2, supabase
 
 springdoc:
   paths-to-exclude: /scalar/**
