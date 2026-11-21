@@ -1,5 +1,6 @@
 package kr.ac.kumoh.s20260000.w26w12_jpa.exception
 
+import org.springframework.dao.DataIntegrityViolationException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.http.converter.HttpMessageNotReadableException
@@ -60,6 +61,16 @@ class GlobalExceptionHandler {
                 status = HttpStatus.BAD_REQUEST.value(),
                 error = "Bad Request",
                 message = "요청 본문의 형식이 올바르지 않습니다."
+            )
+        )
+
+    @ExceptionHandler(DataIntegrityViolationException::class)
+    fun handleDataIntegrityViolation(e: DataIntegrityViolationException): ResponseEntity<ErrorResponse> =
+        ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
+            ErrorResponse(
+                status = HttpStatus.BAD_REQUEST.value(),
+                error = "Bad Request",
+                message = "데이터 무결성 제약 조건을 위반했습니다. (존재하지 않는 사용자 ID 등 입력값을 확인하세요)"
             )
         )
 }
