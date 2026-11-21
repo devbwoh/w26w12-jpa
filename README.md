@@ -4,7 +4,11 @@
 
 https://nano5.notion.site/JPA-41edaf211d4281fd8c7fe9c2ab67b253
 
+https://nano5.notion.site/Supabase-JPA-41fdaf211d428117b48ec82c21af2bf7
+
 <img width="640" alt="image" src="https://github.com/user-attachments/assets/957c0b4e-1784-4cc0-b0f7-cea6e35382ac" />
+
+<img width="640" alt="image" src="https://github.com/user-attachments/assets/ef2234e6-0aec-4378-a127-c83ae65be1fe" />
 
 ---
 
